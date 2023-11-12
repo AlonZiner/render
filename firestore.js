@@ -1,12 +1,9 @@
 const fs = require("firebase-admin");
-
 const serviceAccount = require("./catancontained2.json");
 
 fs.initializeApp({
   credential: fs.credential.cert(serviceAccount),
 });
-
-runFs();
 
 function runFs() {
   const db = fs.firestore();
